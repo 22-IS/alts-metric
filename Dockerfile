@@ -1,5 +1,7 @@
 FROM    python:3.13-slim
 
+LABEL   org.opencontainers.image.source = "https://github.com/22-IS/alts-metric"
+
 ENV     PYTHONUNBUFFERED=1
 ENV     PYTHONDONTWRITEBYTECODE=1
 
