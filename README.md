@@ -19,19 +19,21 @@
 удалить секции `tools` и `environment`.
 
 
-## 3. Использование в Jenkins
-1. Создать `credentials`:
+## 3. Сredentials
+| ID                          | Тип                    | Scope  |
+|-----------------------------|------------------------|--------|
+| `alts-postgres-host`        | Secret text            | Global |
+| `alts-postgres-port`        | Secret text            | Global |
+| `alts-postgres-login`       | Username with password | Global | 
+| `alts-postgres-database`    | Secret text            | Global |
+| `alts-git-private-repo-url` | Secret text            | Global |
 
-|             ID              |          Тип           | Scope  |
-|:---------------------------:|:----------------------:|:------:|
-|    `alts-postgres-host`     |      Secret text       | Global |
-|    `alts-postgres-port`     |      Secret text       | Global |
-|    `alts-postgres-login`    | Username with password | Global | 
-|  `alts-postgres-database`   |      Secret text       | Global |
-| `alts-git-private-repo-url` |      Secret text       | Global |
-
-2. Создать Pipeline, переместить в `Pipeline script` содержимое Jenkinsfile.
-3. (Опционально) Запретить конкурентное выполнение задачи.
+Где:
+- `alts-postgres-host` - Хост СУБД 
+- `alts-postgres-port` - Порт СУБД
+- `alts-postgres-login` - Имя пользователя и пароль учетной записи СУБД
+- `alts-postgres-database` - База данных СУБД
+- `alts-git-private-repo-url` - Ссылка на приватный репозиторий преподавателя (см п.4)
 
 
 ## 4. Создание ссылки на репозиторий
