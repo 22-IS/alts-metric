@@ -22,15 +22,15 @@
 ## 3. Использование в Jenkins
 1. Создать `credentials`:
 
-| ID                          | Тип                    | Scope  | Описание                                                                          |
-|-----------------------------|------------------------|--------|-----------------------------------------------------------------------------------|
-| `alts-postgres-host`        | Secret text            | Global | Хост postgres                                                                     |
-| `alts-postgres-port`        | Secret text            | Global | Порт postgres                                                                     |
-| `alts-postgres-login`       | Username with password | Global | Учетная запись postgres                                                           | 
-| `alts-postgres-database`    | Secret text            | Global | База данных postgres                                                              |
-| `alts-git-private-repo-url` | Secret text            | Global | Ссылка на приватный репозиторий преподавателя с правами чтения и записи (см. п.4) |
+| ID                          | Тип                    | Scope  | Описание                               |
+|-----------------------------|------------------------|--------|----------------------------------------|
+| `alts-postgres-host`        | Secret text            | Global | Хост postgres                          |
+| `alts-postgres-port`        | Secret text            | Global | Порт postgres                          |
+| `alts-postgres-login`       | Username with password | Global | Учетная запись postgres                | 
+| `alts-postgres-database`    | Secret text            | Global | База данных postgres                   |
+| `alts-git-private-repo-url` | Secret text            | Global | Ссылка на приватный репозиторий (п. 4) |
 
-2. Создать Pipeline, переместить в Pipeline script содержимое Jenkinsfile.
+2. Создать Pipeline, переместить в `Pipeline script` содержимое Jenkinsfile.
 3. (Опционально) Запретить конкурентное выполнение задачи.
 
 
